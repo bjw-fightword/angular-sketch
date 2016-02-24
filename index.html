@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="sketch">
+<head>
+	<meta charset="UTF-8">
+	<title>画板</title>
+	<link rel="stylesheet" href="index.css">
+	
+	<script src="angular.js"></script>
+	<script src="index.js"></script>
+</head>
+<body ng-controller="skectController">
+<div class="left">
+	<div class="left-top">简易画板</div>
+	<div class="select">
+		<p>选择工具</p>
+	</div>
+	<ul class="sketch">
+		<li ng-repeat="(key, value) in tools" ng-click="settool(value)" ng-class="{active:value==tool}">
+			<span>{{key}}</span>
+		</li>
+	</ul>
+	<div ng-class="{active:csState.style=='fill'}" ng-click="setStyle('fill')"style="font-size: 20px;height: 42px;line-height: 40px;padding:0 20px;border-bottom: 1px solid rgba(0,0,0,0.2)">填充工具
+		<input type="color"ng-model="csState.fillStyle"style="float: right;margin-top:10px">
+	</div>
+	
+	<div ng-class="{active:csState.style=='stroke'}"ng-click="setStyle('stroke')" style="font-size: 20px;height: 42px;line-height: 40px;padding:0 20px;border-bottom: 2px solid #1a1a1a">画线工具
+		<input type="color"ng-model="csState.strokeStyle" style="float: right;margin-top:10px">
+	</div>
+	<div class="line-width">
+		线条宽度
+		<input type="range"min="1" max="30" step="1" ng-model="csState.lineWidth"style="float:right;margin-top: 10px">
+	</div>
+	<div class="line-width">
+		画布宽度
+		<input type="range"min="400"max="940"step="1"ng-model='canvasWH.width'style="float:right;margin-top: 10px">
+	</div>
+	<div class="line-width"style="border-bottom: 2px solid #1a1a1a">
+		画布高度
+		<input type="range"min="400"max="638"step="1"ng-model='canvasWH.height'style="float:right;margin-top: 10px">
+	</div>
+	<div ng-click="newSketch()"class="new-sketch">新建画布</div>
+	<a ng-click="save($event)"class="baocun">保存图片</a>
+
+
+
+		
+</div>
+	<div class="right">
+		<canvas width="{{canvasWH.width}}" height="{{canvasWH.height}}"id="canvas"></canvas>
+	</div>
+</body>
+</html>

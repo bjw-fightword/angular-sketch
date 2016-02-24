@@ -1,0 +1,108 @@
+*{
+	margin:0;
+	padding: 0;
+}
+body{
+	color:#fff;
+	font-family: "微软雅黑";
+}
+.left{
+	width: 400px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	background: #333;
+	
+}
+.right{
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	left: 400px;
+	background: #eee;
+}
+canvas{
+	position: absolute;
+	top: 0;
+	right: 0;
+	left:0;
+	bottom: 0;
+
+	border: 2px solid #1a1a1a;
+}
+.left li{
+	line-height: 30px;
+	col or: #fff;
+	font-size: 20px;
+	list-style: none;
+	
+}
+.active{
+	color: orange;
+}
+*{
+	cursor: pointer;
+}
+.left-top{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	height: 52px;
+	line-height: 52px;
+	text-align: center;
+	font-size: 25px;
+	border-bottom: 2px solid #1a1a1a;
+	
+}
+.sketch{
+	margin-top: 97px;
+	padding: 0 20px;
+	border-bottom: 2px solid #1a1a1a;
+}
+.sketch li{
+	height: 42px;
+	line-height: 42px;
+	border-bottom: 1px solid rgba(0,0,0,0.2)
+
+}
+input{
+	display: inline-block;
+
+}
+.line-width{
+	line-height: 42px;
+	padding: 0 20px;
+	font-size: 20px;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.new-sketch{
+	height: 42px;
+	font-size: 20px;
+	line-height: 42px;
+	padding:0 20px;
+	border-bottom: 1px solid rgba(0,0,0,0.2)
+}
+.baocun{
+	display: block;
+	height: 42px;
+	line-height: 42px;
+	border-bottom: 2px solid #1a1a1a;
+	padding: 0 20px;
+	font-size: 20px;
+}
+.select{
+	position: absolute;
+	left: 0;
+	top: 52px;
+	right: 0;
+	height: 42px;
+	line-height: 42px;
+	padding: 0 20px;
+	font-size: 20px;
+}
+.select p{
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
